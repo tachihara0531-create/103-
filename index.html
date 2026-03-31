@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>年収プロシミュレーター</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>💰 年収プロシミュレーター（春夏対応）</h1>
+
+  <section class="input-section">
+    <h2>基本シフト</h2>
+    <input type="number" id="wage" placeholder="時給（円）">
+    <input type="number" id="hours" placeholder="1日の労働時間">
+    <input type="number" id="days" placeholder="週何日">
+
+    <h2>春休みシフト</h2>
+    <input type="number" id="springHours" placeholder="1日の労働時間">
+    <input type="number" id="springDays" placeholder="週何日">
+
+    <h2>夏休みシフト</h2>
+    <input type="number" id="summerHours" placeholder="1日の労働時間">
+    <input type="number" id="summerDays" placeholder="週何日">
+
+    <button id="calculateBtn">計算する</button>
+  </section>
+
+  <section class="output-section">
+    <h2>計算結果</h2>
+    <p id="process"></p>
+    <p id="income"></p>
+    <p id="result"></p>
+    <p id="remaining"></p>
+    <p id="advice"></p>
+
+    <h2>月別グラフ</h2>
+    <canvas id="chart" width="400" height="200"></canvas>
+
+    <h2>週・日カレンダー</h2>
+    <div id="calendar"></div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
